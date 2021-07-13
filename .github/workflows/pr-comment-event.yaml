@@ -8,6 +8,7 @@ jobs:
 
   print_info:
     name: Print Comment information
+    runs-on: ubuntu-18.04
     # check if the comments come from pull request, exclude those from issue and check the comment if it contains the keywords
     steps:
       - run: |
