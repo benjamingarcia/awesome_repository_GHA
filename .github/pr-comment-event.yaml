@@ -1,0 +1,17 @@
+name: PR comment actions
+
+on:
+  issue_comment:                                     
+    types: [created, edited]
+
+jobs:
+
+  print_info:
+    name: Print Comment information
+    runs-on: [self-hosted, zendesk-stable]
+    # check if the comments come from pull request, exclude those from issue and check the comment if it contains the keywords
+    steps:
+      - run: |
+          echo "Issue/PR number #${{ github.event.issue.number }}"
+          echo "Comment url: ${{ github.event.comment.html_url }}" 
+          echo "Comment content: ${{ github.event.comment.body }}" 
