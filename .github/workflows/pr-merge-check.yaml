@@ -7,6 +7,6 @@ on:
 
 jobs: 
     if_merged:
-    runs-on: ubuntu-latest
-    steps: 
-      - run: echo "test lock merge"
+      runs-on: ubuntu-latest
+      steps: 
+        - run: echo "test lock merge"
