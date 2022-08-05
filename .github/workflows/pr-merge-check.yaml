@@ -11,5 +11,6 @@ jobs:
       steps: 
         - run: 
            - echo "test lock merge"
+           - echo "github.event.pull_request"
            - exit 1
 
