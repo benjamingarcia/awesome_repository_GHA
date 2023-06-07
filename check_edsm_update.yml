@@ -1,0 +1,15 @@
+name: Check EDSM Update
+
+on:
+  push:
+    paths:
+      - build.sbt
+
+env:
+  GITHUB_SHA: ${{ github.sha }}
+  FOSSA_API_KEY: ${{ secrets.FOSSA_API_KEY }}
+
+jobs:
+  test:
+    steps:
+      - run: echo "Hello world"
