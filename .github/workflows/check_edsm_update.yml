@@ -11,5 +11,7 @@ env:
 
 jobs:
   test:
+    name: check build.sbt
+    runs-on: ubuntu-18.04
     steps:
       - run: echo "Hello world"
